@@ -1,0 +1,35 @@
+{
+	"port": 8080,
+	"domain": [
+		{
+			"PackagePath": "services",
+			"controllerClass": "Service1"
+		}
+	],
+	"hosts": [
+		{
+			"domainName": "aaa.com",
+			"documentRoot": "/webApp/service1/",
+			"welcomeFile": "index.html",
+			"PackagePath": "services",
+			"controllerClass": "Service1",
+			"servlet": [
+				{
+					"urlPattern": "services",
+					"servletClass": "servlets.Servlet1"
+				}
+			]
+		},
+		{
+			"domainName": "bbb.com",
+			"documentRoot": "/webApp/service2",
+			"welcomeFile": "index.html",
+			"servlet": [
+				{
+					"urlPattern": "services",
+					"servletClass": "servlets.Servlet2"
+				}
+			]
+		}
+	]
+}
